@@ -155,6 +155,8 @@ echo 'Printing size of target directory'
 du -sh ./target/*
 echo 'Printing size of stage directory'
 du -sh ./target/universal/stage/*
+echo 'Printing size of lib directory'
+du -sh ./target/universal/stage/lib/*
 
 # Move compiled app back to where Heroku expects it
 mv $BUILD_DIR $APP_BUILD_DIR
