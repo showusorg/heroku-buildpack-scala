@@ -149,6 +149,8 @@ if is_play $BUILD_DIR ; then
     rm -rf $BUILD_DIR/target/resolution-cache
   fi
 fi
+echo 'Printing current directory'
+pwd
 echo 'Printing size of current directory'
 du -sh ./*
 echo 'Printing size of target directory'
@@ -157,6 +159,8 @@ echo 'Printing size of stage directory'
 du -sh ./target/universal/stage/*
 echo 'Printing size of lib directory'
 du -sh ./target/universal/stage/lib/*
+echo 'Printing contents of lib directory'
+ls -lh ./target/universal/stage/lib/
 
 # Move compiled app back to where Heroku expects it
 mv $BUILD_DIR $APP_BUILD_DIR
